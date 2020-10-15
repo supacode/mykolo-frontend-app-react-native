@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '2rem',
+    padding: 23,
   },
   logoWrap: {
     flexDirection: 'column',

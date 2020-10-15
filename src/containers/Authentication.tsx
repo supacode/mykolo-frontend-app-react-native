@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     width: '100vw',
   },
   content: {
-    padding: '2rem',
+    padding: 23,
   },
 });
 

@@ -4,12 +4,19 @@ import {
   SafeAreaView,
   StyleSheet,
   View,
+  Text,
   ImageBackground,
 } from 'react-native';
 
+import { colors } from '../assets/globals';
+
 import AppHeader from '../components/AppHeader';
 
-const AuthWrap: React.FC = ({ children }) => {
+const AuthWrap: React.FC<{ pageTitle?: string; pageSubTitle?: string }> = ({
+  children,
+  pageSubTitle,
+  pageTitle,
+}) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -18,7 +25,13 @@ const AuthWrap: React.FC = ({ children }) => {
           style={styles.backgroundImage}
         >
           <AppHeader />
-          <View style={styles.content}>{children}</View>
+          <View style={styles.content}>
+            <View style={styles.contentHeader}>
+              <Text style={styles.pageTitle}>{pageTitle}</Text>
+              <Text style={styles.pageSubTitle}>{pageSubTitle}</Text>
+            </View>
+            {children}
+          </View>
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
@@ -37,6 +50,20 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 23,
+  },
+  contentHeader: {
+    paddingBottom: 20,
+  },
+  pageTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: colors.accent,
+    lineHeight: 50,
+  },
+  pageSubTitle: {
+    fontSize: 18,
+    color: colors.accent,
+    lineHeight: 40,
   },
 });
 

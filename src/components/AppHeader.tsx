@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
   },
   logoImg: {
     flex: 1,
-    height: '50%',
-    width: '50%',
+    height: '45%',
+    width: '45%',
   },
 });
 

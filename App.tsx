@@ -8,6 +8,7 @@ import EducationPage from './src/screens/Education';
 import NextOfKinPage from './src/screens/NextOfKin';
 import PasswordRecoveryPage from './src/screens/PasswordRecovery';
 import PhoneVerificationPage from './src/screens/PhoveVerification';
+import PinPage from './src/screens/Pin';
 
 const App: React.FC = () => {
   return (
@@ -19,7 +20,8 @@ const App: React.FC = () => {
       {/* <EducationPage /> */}
       {/* <NextOfKinPage /> */}
       {/* <PasswordRecoveryPage /> */}
-      <PhoneVerificationPage />
+      {/* <PhoneVerificationPage /> */}
+      <PinPage />
     </Fragment>
   );
 };

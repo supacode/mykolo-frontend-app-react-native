@@ -25,6 +25,7 @@ const NextOfKinPage: React.FC = () => {
         <TextInput
           style={globalStyles.appTextInput}
           placeholder="+234 000 000 000"
+          keyboardType="phone-pad"
         />
       </AppInputGroup>
       <AppInputGroup>

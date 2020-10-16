@@ -4,16 +4,16 @@ import { AntDesign } from '@expo/vector-icons';
 
 import { colors } from '../assets/globals';
 
-const AppInputGroup: React.FC<{ iconName?: string }> = ({
+const AppInputGroup: React.FC<{ icon?: JSX.Element }> = ({
   children,
-  iconName,
+  icon,
 }) => {
+  const currentIcon = icon;
+
   return (
     <View style={styles.appInputGroup}>
-      <View style={{ width: iconName ? '85%' : '100%' }}>{children}</View>
-      {iconName && (
-        <AntDesign name={iconName} size={30} color={colors.accent} />
-      )}
+      <View style={{ width: icon ? '85%' : '100%' }}>{children}</View>
+      {icon && currentIcon}
     </View>
   );
 };

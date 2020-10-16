@@ -1,9 +1,15 @@
-import React from 'react';
-import Authentication from './src/containers/Authentication';
-import SignupPage from './src/pages/Signup';
+import React, { Fragment } from 'react';
+
+import PasswordPage from './src/pages/Password';
+import EmailPage from './src/pages/Email';
 
 const App: React.FC = () => {
-  return <SignupPage />;
+  return (
+    <Fragment>
+      {/* <EmailPage /> */}
+      <PasswordPage />
+    </Fragment>
+  );
 };
 
 export default App;

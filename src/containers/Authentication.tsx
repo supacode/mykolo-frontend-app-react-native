@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   pageTitle: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: '700',
     color: colors.accent,
     lineHeight: 50,

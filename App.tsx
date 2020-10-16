@@ -6,6 +6,7 @@ import BasicInfoPage from './src/screens/BasicInfo';
 import EmergencyContactPage from './src/screens/EmergencyContact';
 import EducationPage from './src/screens/Education';
 import NextOfKinPage from './src/screens/NextOfKin';
+import PasswordRecoveryPage from './src/screens/PasswordRecovery';
 
 const App: React.FC = () => {
   return (
@@ -15,7 +16,8 @@ const App: React.FC = () => {
       {/* <BasicInfoPage /> */}
       {/* <EmergencyContactPage /> */}
       {/* <EducationPage /> */}
-      <NextOfKinPage />
+      {/* <NextOfKinPage /> */}
+      <PasswordRecoveryPage />
     </Fragment>
   );
 };

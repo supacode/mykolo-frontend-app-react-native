@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput, View, StyleSheet } from 'react-native';
+import { TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import { colors, globalStyles } from '../assets/globals';
@@ -17,32 +17,24 @@ const EmailPage: React.FC = () => {
       pageTitle="Sign up"
       pageSubTitle="Require information for account creations"
     >
-      <View style={styles.appContent}>
-        <AppInputGroup icon={currentIcon}>
-          <TextInput
-            style={globalStyles.appTextInput}
-            placeholder="E-mail"
-            keyboardType="email-address"
-          />
-        </AppInputGroup>
-        <AppInputGroup icon={currentIcon}>
-          <TextInput
-            style={globalStyles.appTextInput}
-            placeholder="Alternate E-mail"
-            keyboardType="email-address"
-          />
-        </AppInputGroup>
-      </View>
+      <AppInputGroup icon={currentIcon}>
+        <TextInput
+          style={globalStyles.appTextInput}
+          placeholder="E-mail"
+          keyboardType="email-address"
+        />
+      </AppInputGroup>
+      <AppInputGroup icon={currentIcon}>
+        <TextInput
+          style={globalStyles.appTextInput}
+          placeholder="Alternate E-mail"
+          keyboardType="email-address"
+        />
+      </AppInputGroup>
 
       <AppButton text="Continue" />
     </Authentication>
   );
 };
-
-const styles = StyleSheet.create({
-  appContent: {
-    marginVertical: 20,
-  },
-});
 
 export default EmailPage;

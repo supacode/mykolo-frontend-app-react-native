@@ -30,7 +30,7 @@ const AuthWrap: React.FC<{ pageTitle?: string; pageSubTitle?: string }> = ({
               <Text style={styles.pageTitle}>{pageTitle}</Text>
               <Text style={styles.pageSubTitle}>{pageSubTitle}</Text>
             </View>
-            {children}
+            <View style={styles.appContent}>{children}</View>
           </View>
         </ImageBackground>
       </ScrollView>
@@ -53,6 +53,9 @@ const styles = StyleSheet.create({
   },
   contentHeader: {
     paddingBottom: 20,
+  },
+  appContent: {
+    marginVertical: 20,
   },
   pageTitle: {
     fontSize: 30,

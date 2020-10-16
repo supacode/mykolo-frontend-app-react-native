@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     shadowOffset: { height: 1, width: 1 },
     shadowOpacity: 1,
     shadowRadius: 1,
+    marginVertical: 20,
   },
   text: {
     fontSize: 15,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput, View, StyleSheet } from 'react-native';
+import { TextInput } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 import { colors, globalStyles } from '../assets/globals';
@@ -17,32 +17,24 @@ const PasswordPage: React.FC = () => {
       pageTitle="Set Password"
       pageSubTitle="Require information for account creations"
     >
-      <View style={styles.appContent}>
-        <AppInputGroup icon={currentIcon}>
-          <TextInput
-            style={globalStyles.appTextInput}
-            placeholder="Password"
-            secureTextEntry={true}
-          />
-        </AppInputGroup>
-        <AppInputGroup icon={currentIcon}>
-          <TextInput
-            style={globalStyles.appTextInput}
-            secureTextEntry={true}
-            placeholder="Repeat Password"
-          />
-        </AppInputGroup>
-      </View>
+      <AppInputGroup icon={currentIcon}>
+        <TextInput
+          style={globalStyles.appTextInput}
+          placeholder="Password"
+          secureTextEntry={true}
+        />
+      </AppInputGroup>
+      <AppInputGroup icon={currentIcon}>
+        <TextInput
+          style={globalStyles.appTextInput}
+          secureTextEntry={true}
+          placeholder="Repeat Password"
+        />
+      </AppInputGroup>
 
       <AppButton text="Continue" />
     </Authentication>
   );
 };
-
-const styles = StyleSheet.create({
-  appContent: {
-    marginVertical: 20,
-  },
-});
 
 export default PasswordPage;

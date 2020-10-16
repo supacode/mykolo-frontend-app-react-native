@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 
-import PasswordPage from './src/pages/Password';
-import EmailPage from './src/pages/Email';
-import BasicInfoPage from './src/pages/BasicInfo';
-import EmergencyContactPage from './src/pages/EmergencyContact';
+import PasswordPage from './src/screens/Password';
+import EmailPage from './src/screens/Email';
+import BasicInfoPage from './src/screens/BasicInfo';
+import EmergencyContactPage from './src/screens/EmergencyContact';
+import EducationPage from './src/screens/Education';
 
 const App: React.FC = () => {
   return (
@@ -11,7 +12,8 @@ const App: React.FC = () => {
       {/* <EmailPage /> */}
       {/* <PasswordPage /> */}
       {/* <BasicInfoPage /> */}
-      <EmergencyContactPage />
+      {/* <EmergencyContactPage /> */}
+      <EducationPage />
     </Fragment>
   );
 };

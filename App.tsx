@@ -1,29 +1,21 @@
-import React, { Fragment } from 'react';
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-import PasswordPage from './src/screens/Password';
-import EmailPage from './src/screens/Email';
-import BasicInfoPage from './src/screens/BasicInfo';
-import EmergencyContactPage from './src/screens/EmergencyContact';
-import EducationPage from './src/screens/Education';
-import NextOfKinPage from './src/screens/NextOfKin';
-import PasswordRecoveryPage from './src/screens/PasswordRecovery';
-import PhoneVerificationPage from './src/screens/PhoveVerification';
-import PinPage from './src/screens/Pin';
-
-const App: React.FC = () => {
+export default function App() {
   return (
-    <Fragment>
-      {/* <EmailPage /> */}
-      {/* <PasswordPage /> */}
-      {/* <BasicInfoPage /> */}
-      {/* <EmergencyContactPage /> */}
-      {/* <EducationPage /> */}
-      {/* <NextOfKinPage /> */}
-      {/* <PasswordRecoveryPage /> */}
-      {/* <PhoneVerificationPage /> */}
-      <PinPage />
-    </Fragment>
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
-};
+}
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

@@ -6,10 +6,11 @@ import {
   View,
   Text,
   ImageBackground,
+  Dimensions,
 } from 'react-native';
+import Constants from 'expo-constants';
 
 import { colors } from '../assets/globals';
-
 import AppHeader from '../components/AppHeader';
 
 const AuthWrap: React.FC<{ pageTitle?: string; pageSubTitle?: string }> = ({
@@ -27,8 +28,11 @@ const AuthWrap: React.FC<{ pageTitle?: string; pageSubTitle?: string }> = ({
           <AppHeader />
           <View style={styles.content}>
             <View style={styles.contentHeader}>
-              <Text style={styles.pageTitle}>{pageTitle}</Text>
-              <Text style={styles.pageSubTitle}>{pageSubTitle}</Text>
+              {pageTitle && <Text style={styles.pageTitle}>{pageTitle}</Text>}
+
+              {pageSubTitle && (
+                <Text style={styles.pageSubTitle}>{pageSubTitle}</Text>
+              )}
             </View>
             <View style={styles.appContent}>{children}</View>
           </View>
@@ -39,23 +43,25 @@ const AuthWrap: React.FC<{ pageTitle?: string; pageSubTitle?: string }> = ({
 };
 
 const styles = StyleSheet.create({
+  appContent: {
+    marginVertical: 20,
+  },
   container: {
     display: 'flex',
     flex: 1,
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: colors.white,
   },
   backgroundImage: {
     flex: 1,
-    height: '100vh',
-    width: '100vw',
+    overflow: 'scroll',
+    minHeight: Dimensions.get('window').height,
   },
   content: {
     padding: 23,
   },
   contentHeader: {
     paddingBottom: 20,
-  },
-  appContent: {
-    marginVertical: 20,
   },
   pageTitle: {
     fontSize: 30,

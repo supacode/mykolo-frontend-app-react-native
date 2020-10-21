@@ -1,11 +1,10 @@
 import React from 'react';
-import { TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
+import AppTextInput from '../components/AppTextInput';
 
 const PasswordRecoveryPage: React.FC = () => {
   return (
@@ -13,16 +12,11 @@ const PasswordRecoveryPage: React.FC = () => {
       pageTitle="Forgot Password"
       pageSubTitle="Require information for account creations"
     >
-      <AppInputGroup
+      <AppTextInput
+        placeholder="E-mail address"
+        keyboardType="default"
         icon={<AntDesign name="mail" size={30} color={colors.accent} />}
-      >
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="E-mail"
-          keyboardType="email-address"
-        />
-      </AppInputGroup>
-
+      />
       <AppButton text="Send Link" />
     </Authentication>
   );

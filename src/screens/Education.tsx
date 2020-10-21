@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TextInput } from 'react-native';
-import { Feather } from '@expo/vector-icons';
 
 import { globalStyles } from '../assets/globals';
 import AppButton from '../components/AppButton';
 import AppInputGroup from '../components/AppInputGroup';
+import AppTextInput from '../components/AppTextInput';
 import Authentication from '../containers/Authentication';
 
 const EducationPage: React.FC = () => {
@@ -13,24 +13,10 @@ const EducationPage: React.FC = () => {
       pageTitle="Education"
       pageSubTitle="Fill in the details below"
     >
-      <AppInputGroup>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Bachelor's Degree"
-        />
-      </AppInputGroup>
-      <AppInputGroup>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Master's Degree"
-        />
-      </AppInputGroup>
-      <AppInputGroup>
-        <TextInput style={globalStyles.appTextInput} placeholder="Ph. D." />
-      </AppInputGroup>
-      <AppInputGroup>
-        <TextInput style={globalStyles.appTextInput} placeholder="Others" />
-      </AppInputGroup>
+      <AppTextInput placeholder="Bachelor's Degree" />
+      <AppTextInput placeholder="Master's Degree" />
+      <AppTextInput placeholder="Ph. D." />
+      <AppTextInput placeholder="Others" />
 
       <AppButton text="Continue" />
     </Authentication>

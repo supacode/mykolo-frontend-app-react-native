@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
+import AppTextInput from '../components/AppTextInput';
 
 const PinPage: React.FC = () => {
   const [currentIcon, setCurrentIcon] = useState(
@@ -17,20 +16,16 @@ const PinPage: React.FC = () => {
       pageTitle="Set PIN"
       pageSubTitle="Require information for account creations"
     >
-      <AppInputGroup icon={currentIcon}>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="PIN"
-          keyboardType="number-pad"
-        />
-      </AppInputGroup>
-      <AppInputGroup icon={currentIcon}>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Repeat PIN"
-          keyboardType="number-pad"
-        />
-      </AppInputGroup>
+      <AppTextInput
+        icon={currentIcon}
+        placeholder="PIN"
+        keyboardType="number-pad"
+      />
+      <AppTextInput
+        icon={currentIcon}
+        placeholder="Repeat PIN"
+        keyboardType="number-pad"
+      />
 
       <AppButton text="Continue" />
     </Authentication>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
+import { Text } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import { colors, globalStyles } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
+import AppTextInput from '../components/AppTextInput';
+import AuthFooter from '../components/AuthFooter';
 
 const EmailPage: React.FC = () => {
   const [currentIcon, setCurrentIcon] = useState(
@@ -17,22 +18,24 @@ const EmailPage: React.FC = () => {
       pageTitle="Sign up"
       pageSubTitle="Require information for account creations"
     >
-      <AppInputGroup icon={currentIcon}>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="E-mail"
-          keyboardType="email-address"
-        />
-      </AppInputGroup>
-      <AppInputGroup icon={currentIcon}>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Alternate E-mail"
-          keyboardType="email-address"
-        />
-      </AppInputGroup>
+      <AppTextInput
+        placeholder="E-mail"
+        keyboardType="email-address"
+        icon={currentIcon}
+      />
+      <AppTextInput
+        placeholder="Alternate E-mail"
+        keyboardType="email-address"
+        icon={currentIcon}
+      />
 
       <AppButton text="Continue" />
+      <AuthFooter>
+        <Text style={globalStyles.defaultText}>Already have an account?</Text>
+        <Text style={[globalStyles.defaultText, globalStyles.dangerText]}>
+          LOGIN
+        </Text>
+      </AuthFooter>
     </Authentication>
   );
 };

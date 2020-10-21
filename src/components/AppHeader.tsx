@@ -4,17 +4,24 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { globalStyles } from '../assets/globals';
 
-const AppHeader: React.FC = () => {
+const AppHeader: React.FC = props => {
   return (
     <View style={styles.header}>
+      {/* TODO: Fix go back */}
       <TouchableOpacity>
         <Ionicons name="ios-arrow-back" size={30} color="black" />
       </TouchableOpacity>
       <View style={styles.logoWrap}>
-        <Image style={styles.logoImg} source={require('../assets/logo.png')} />
+        <Image
+          style={styles.logo}
+          resizeMode="contain"
+          source={require('../assets/logo.png')}
+        />
       </View>
       <View>
-        <Text style={globalStyles.defaultText}>Skip Here</Text>
+        <TouchableOpacity>
+          <Text style={globalStyles.defaultText}>Skip Here</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -30,14 +37,11 @@ const styles = StyleSheet.create({
   logoWrap: {
     flexDirection: 'column',
     alignItems: 'center',
-    flex: 1,
-    margin: 2,
-    height: '50px',
   },
-  logoImg: {
-    flex: 1,
-    height: '45%',
-    width: '45%',
+  logo: {
+    alignSelf: 'center',
+    height: 80,
+    padding: 20,
   },
 });
 

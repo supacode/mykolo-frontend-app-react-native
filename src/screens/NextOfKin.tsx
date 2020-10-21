@@ -1,11 +1,10 @@
 import React from 'react';
-import { TextInput } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
+import AppTextInput from '../components/AppTextInput';
 
 const NextOfKinPage: React.FC = () => {
   return (
@@ -13,27 +12,16 @@ const NextOfKinPage: React.FC = () => {
       pageTitle="Next of Kin"
       pageSubTitle="Fill in the details below"
     >
-      <AppInputGroup>
-        <TextInput style={globalStyles.appTextInput} placeholder="Name" />
-      </AppInputGroup>
-      <AppInputGroup>
-        <TextInput style={globalStyles.appTextInput} placeholder="Address" />
-      </AppInputGroup>
-      <AppInputGroup
+      <AppTextInput placeholder="Name" />
+      <AppTextInput placeholder="Address" multiline />
+      <AppTextInput
+        placeholder="+234 000 000 000"
+        keyboardType="phone-pad"
+        flagIcon
         icon={<Feather name="smartphone" size={30} color={colors.accent} />}
-      >
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="+234 000 000 000"
-          keyboardType="phone-pad"
-        />
-      </AppInputGroup>
-      <AppInputGroup>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Relationship"
-        />
-      </AppInputGroup>
+      />
+
+      <AppTextInput placeholder="Relationship" />
 
       <AppButton text="Continue" />
     </Authentication>

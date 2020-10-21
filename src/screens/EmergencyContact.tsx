@@ -1,11 +1,11 @@
 import React from 'react';
-import { TextInput } from 'react-native';
 import { AntDesign, Feather } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
+import AppTextInput from '../components/AppTextInput';
+import AppGlowButton from '../components/GenderToggle';
 
 const EmergencyContactPage: React.FC = () => {
   return (
@@ -13,35 +13,23 @@ const EmergencyContactPage: React.FC = () => {
       pageTitle="Emergency Contact"
       pageSubTitle="Please fill in the details below"
     >
-      <AppInputGroup>
-        <TextInput style={globalStyles.appTextInput} placeholder="Name" />
-      </AppInputGroup>
-      {/* TODO: Create flag  icon */}
-      <AppInputGroup
+      <AppTextInput placeholder="Name" />
+      <AppTextInput
         icon={<Feather name="smartphone" size={30} color="black" />}
-      >
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="+234 000 000 000"
-          keyboardType="phone-pad"
-        />
-      </AppInputGroup>
-      <AppInputGroup
-        icon={<AntDesign name="mail" size={30} color={colors.accent} />}
-      >
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Email address"
-        />
-      </AppInputGroup>
-      {/* TODO: Create gender buttons */}
+        placeholder="+234 000 000 000"
+        keyboardType="phone-pad"
+        flagIcon
+      />
 
-      <AppInputGroup>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Relationship"
-        />
-      </AppInputGroup>
+      <AppTextInput
+        icon={<AntDesign name="mail" size={30} color={colors.accent} />}
+        placeholder="Email address"
+        keyboardType="email-address"
+      />
+
+      <AppGlowButton />
+
+      <AppTextInput placeholder="Relationship" />
 
       <AppButton text="Continue" />
     </Authentication>

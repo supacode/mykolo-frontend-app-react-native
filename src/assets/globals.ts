@@ -1,21 +1,20 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 
 export const colors = {
   accent: '#040404',
   white: '#fff',
-  // grey: '#eee',
-  grey: '#ccc',
+  grey: '#e6e6e6',
+  blue: '#4088e2',
+  danger: '#da3021',
 };
 
 export const globalStyles = StyleSheet.create({
   defaultText: {
-    fontSize: 16,
+    fontSize: 17,
+    lineHeight: 30,
+    color: colors.accent,
   },
-  appTextInput: {
-    padding: 10,
-    borderWidth: 0,
-    fontSize: 16,
-    width: '100%',
+  dangerText: {
+    color: colors.danger,
   },
 });

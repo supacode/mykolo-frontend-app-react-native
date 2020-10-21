@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
+import AppTextInput from '../components/AppTextInput';
 
 const PasswordPage: React.FC = () => {
   const [currentIcon, setCurrentIcon] = useState(
@@ -17,20 +16,13 @@ const PasswordPage: React.FC = () => {
       pageTitle="Set Password"
       pageSubTitle="Require information for account creations"
     >
-      <AppInputGroup icon={currentIcon}>
-        <TextInput
-          style={globalStyles.appTextInput}
-          placeholder="Password"
-          secureTextEntry={true}
-        />
-      </AppInputGroup>
-      <AppInputGroup icon={currentIcon}>
-        <TextInput
-          style={globalStyles.appTextInput}
-          secureTextEntry={true}
-          placeholder="Repeat Password"
-        />
-      </AppInputGroup>
+      <AppTextInput placeholder="Password" icon={currentIcon} secureTextEntry />
+
+      <AppTextInput
+        placeholder="Repeat Password"
+        icon={currentIcon}
+        secureTextEntry
+      />
 
       <AppButton text="Continue" />
     </Authentication>

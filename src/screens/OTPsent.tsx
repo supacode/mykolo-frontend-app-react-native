@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { globalStyles } from '../assets/globals';
 
 import AppButton from '../components/AppButton';
+import AuthFooter from '../components/AuthFooter';
 import Authentication from '../containers/Authentication';
 
 const OTPsent: React.FC = () => {
@@ -24,9 +25,11 @@ const OTPsent: React.FC = () => {
       </View>
       <AppButton text="Resent OTP" />
 
-      <Text style={[globalStyles.defaultText, globalStyles.dangerText]}>
-        I didn't receive code.
-      </Text>
+      <AuthFooter>
+        <Text style={[globalStyles.defaultText, globalStyles.dangerText]}>
+          I didn't receive code.
+        </Text>
+      </AuthFooter>
     </Authentication>
   );
 };

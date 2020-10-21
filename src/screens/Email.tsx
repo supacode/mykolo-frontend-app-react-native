@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Text } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-import { colors } from '../assets/globals';
+import { colors, globalStyles } from '../assets/globals';
 import AppButton from '../components/AppButton';
 import Authentication from '../containers/Authentication';
 import AppTextInput from '../components/AppTextInput';
+import AuthFooter from '../components/AuthFooter';
 
 const EmailPage: React.FC = () => {
   const [currentIcon, setCurrentIcon] = useState(
@@ -28,6 +30,12 @@ const EmailPage: React.FC = () => {
       />
 
       <AppButton text="Continue" />
+      <AuthFooter>
+        <Text style={globalStyles.defaultText}>Already have an account?</Text>
+        <Text style={[globalStyles.defaultText, globalStyles.dangerText]}>
+          LOGIN
+        </Text>
+      </AuthFooter>
     </Authentication>
   );
 };

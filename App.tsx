@@ -7,9 +7,13 @@ import EmergencyContactPage from './src/screens/EmergencyContact';
 import EducationPage from './src/screens/Education';
 import NextOfKinPage from './src/screens/NextOfKin';
 import PasswordRecoveryPage from './src/screens/PasswordRecovery';
-import PhoneVerificationPage from './src/screens/PhoveVerification';
+import PhoneVerificationPage from './src/screens/PhoneVerification';
 import PinPage from './src/screens/Pin';
 import OTPsent from './src/screens/OTPsent';
+import WelcomeBack from './src/screens/WelcomeBack';
+import SaveWith from './src/screens/SaveWith';
+import NameInput from './src/screens/NameInput';
+import SetAge from './src/screens/SetAge';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +28,10 @@ const App: React.FC = () => {
       {/* <PhoneVerificationPage /> */}
       {/* <OTPsent /> */}
       {/* <PinPage /> */}
+      {/* <WelcomeBack /> */}
+      {/* <SaveWith /> */}
+      {/* <NameInput /> */}
+      <SetAge />
     </Fragment>
   );
 };

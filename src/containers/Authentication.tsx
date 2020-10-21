@@ -28,8 +28,11 @@ const AuthWrap: React.FC<{ pageTitle?: string; pageSubTitle?: string }> = ({
           <AppHeader />
           <View style={styles.content}>
             <View style={styles.contentHeader}>
-              <Text style={styles.pageTitle}>{pageTitle}</Text>
-              <Text style={styles.pageSubTitle}>{pageSubTitle}</Text>
+              {pageTitle && <Text style={styles.pageTitle}>{pageTitle}</Text>}
+
+              {pageSubTitle && (
+                <Text style={styles.pageSubTitle}>{pageSubTitle}</Text>
+              )}
             </View>
             <View style={styles.appContent}>{children}</View>
           </View>
@@ -40,6 +43,9 @@ const AuthWrap: React.FC<{ pageTitle?: string; pageSubTitle?: string }> = ({
 };
 
 const styles = StyleSheet.create({
+  appContent: {
+    marginVertical: 20,
+  },
   container: {
     display: 'flex',
     flex: 1,
@@ -55,9 +61,6 @@ const styles = StyleSheet.create({
   },
   contentHeader: {
     paddingBottom: 20,
-  },
-  appContent: {
-    marginVertical: 20,
   },
   pageTitle: {
     fontSize: 30,

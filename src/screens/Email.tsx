@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
 import Authentication from '../containers/Authentication';
 import AppTextInput from '../components/AppTextInput';

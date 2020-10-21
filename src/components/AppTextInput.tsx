@@ -1,7 +1,6 @@
 import React from 'react';
-import { KeyboardType, KeyboardTypeOptions, TextInput } from 'react-native';
+import { KeyboardTypeOptions, TextInput, StyleSheet } from 'react-native';
 
-import { globalStyles } from '../assets/globals';
 import AppInputGroup from './AppInputGroup';
 
 const AppTextInput: React.FC<{
@@ -20,18 +19,26 @@ const AppTextInput: React.FC<{
   multiline,
 }) => {
   return (
-    <>
-      <AppInputGroup flagIcon={flagIcon} icon={icon}>
-        <TextInput
-          keyboardType={keyboardType}
-          style={globalStyles.appTextInput}
-          placeholder={placeholder}
-          secureTextEntry={secureTextEntry}
-          multiline={multiline}
-        />
-      </AppInputGroup>
-    </>
+    <AppInputGroup flagIcon={flagIcon} icon={icon}>
+      <TextInput
+        keyboardType={keyboardType}
+        style={styles.appTextInput}
+        placeholder={placeholder}
+        secureTextEntry={secureTextEntry}
+        multiline={multiline}
+        blurOnSubmit={true}
+      />
+    </AppInputGroup>
   );
 };
+
+const styles = StyleSheet.create({
+  appTextInput: {
+    padding: 10,
+    borderWidth: 0,
+    fontSize: 18,
+    width: '100%',
+  },
+});
 
 export default AppTextInput;

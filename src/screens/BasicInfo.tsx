@@ -1,9 +1,6 @@
 import React from 'react';
-import { TextInput } from 'react-native';
 
-import { globalStyles } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import AppTextInput from '../components/AppTextInput';
 import Authentication from '../containers/Authentication';
 
@@ -16,9 +13,9 @@ const BasicInfoPage: React.FC = () => {
       <AppTextInput placeholder="First name" />
       <AppTextInput placeholder="Last name" />
       <AppTextInput placeholder="Occupation" />
-      <AppTextInput placeholder="Address" />
+      <AppTextInput placeholder="Address" multiline />
+      <AppTextInput placeholder="Input Address" multiline />
       <AppTextInput placeholder="Local Government" />
-      <AppTextInput placeholder="Input Address" />
 
       {/* TODO: Create gender buttons */}
 

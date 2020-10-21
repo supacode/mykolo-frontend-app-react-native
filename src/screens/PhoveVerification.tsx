@@ -1,10 +1,9 @@
 import React from 'react';
-import { TextInput } from 'react-native';
+import { Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 import { colors, globalStyles } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
 import AppTextInput from '../components/AppTextInput';
 
@@ -22,6 +21,9 @@ const PhoneVerificationPage: React.FC = () => {
       />
 
       <AppButton text="Verify Phone Number" />
+      <Text style={[globalStyles.defaultText, globalStyles.dangerText]}>
+        I didn't receive code.
+      </Text>
     </Authentication>
   );
 };

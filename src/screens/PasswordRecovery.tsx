@@ -1,5 +1,4 @@
 import React from 'react';
-import { TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import { colors } from '../assets/globals';
@@ -14,7 +13,7 @@ const PasswordRecoveryPage: React.FC = () => {
       pageSubTitle="Require information for account creations"
     >
       <AppTextInput
-        placeholder="Recover Password"
+        placeholder="E-mail address"
         keyboardType="default"
         icon={<AntDesign name="mail" size={30} color={colors.accent} />}
       />

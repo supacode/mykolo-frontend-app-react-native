@@ -1,12 +1,11 @@
 import React from 'react';
-import { TextInput } from 'react-native';
 import { AntDesign, Feather } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
 import AppTextInput from '../components/AppTextInput';
+import AppGlowButton from '../components/GenderToggle';
 
 const EmergencyContactPage: React.FC = () => {
   return (
@@ -27,7 +26,8 @@ const EmergencyContactPage: React.FC = () => {
         placeholder="Email address"
         keyboardType="email-address"
       />
-      {/* TODO: Create gender buttons */}
+
+      <AppGlowButton />
 
       <AppTextInput placeholder="Relationship" />
 

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-import { colors, globalStyles } from '../assets/globals';
+import { colors } from '../assets/globals';
 import AppButton from '../components/AppButton';
-import AppInputGroup from '../components/AppInputGroup';
 import Authentication from '../containers/Authentication';
 import AppTextInput from '../components/AppTextInput';
 

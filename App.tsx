@@ -9,6 +9,7 @@ import NextOfKinPage from './src/screens/NextOfKin';
 import PasswordRecoveryPage from './src/screens/PasswordRecovery';
 import PhoneVerificationPage from './src/screens/PhoveVerification';
 import PinPage from './src/screens/Pin';
+import OTPsent from './src/screens/OTPsent';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       {/* <NextOfKinPage /> */}
       {/* <PasswordRecoveryPage /> */}
       {/* <PhoneVerificationPage /> */}
+      {/* <OTPsent /> */}
       {/* <PinPage /> */}
     </Fragment>
   );

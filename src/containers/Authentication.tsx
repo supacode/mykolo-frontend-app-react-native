@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     paddingTop: Constants.statusBarHeight,
+    backgroundColor: colors.white,
   },
   backgroundImage: {
     flex: 1,

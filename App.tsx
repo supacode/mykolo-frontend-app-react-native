@@ -18,20 +18,20 @@ import SetAge from './src/screens/SetAge';
 const App: React.FC = () => {
   return (
     <Fragment>
-      {/* <EmailPage /> */}
-      {/* <PasswordPage /> */}
-      {/* <BasicInfoPage /> */}
-      {/* <EmergencyContactPage /> */}
-      {/* <EducationPage /> */}
-      {/* <NextOfKinPage /> */}
-      {/* <PasswordRecoveryPage /> */}
+      <WelcomeBack />
+      {/* <PinPage /> */}
+      {/* <SaveWith /> */}
       {/* <PhoneVerificationPage /> */}
       {/* <OTPsent /> */}
-      {/* <PinPage /> */}
-      {/* <WelcomeBack /> */}
-      {/* <SaveWith /> */}
+      {/* <EmergencyContactPage /> */}
+      {/* <NextOfKinPage /> */}
+      {/* <EmailPage /> */}
+      {/* <BasicInfoPage /> */}
+      {/* <EducationPage /> */}
       {/* <NameInput /> */}
-      <SetAge />
+      {/* <PasswordRecoveryPage /> */}
+      {/* <SetAge /> */}
+      {/* <PasswordPage /> */}
     </Fragment>
   );
 };
